@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CosmosDBResourceTokenBroker.API", "CosmosDBResourceTokenBroker.API\CosmosDBResourceTokenBroker.API.csproj", "{F653DE31-B246-4AE5-A659-745C6B9A0554}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CosmosDBResourceTokenBroker.Shared", "CosmosDBResourceTokenBroker.Shared\CosmosDBResourceTokenBroker.Shared.csproj", "{1C054420-60D8-4790-8D84-96A7A450E7EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmosDBResourceTokenBrokerV2.API", "CosmosDBResourceTokenBrokerV2.API\CosmosDBResourceTokenBrokerV2.API.csproj", "{7FA2E1FE-6E87-414E-A681-0B9075289E0F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F653DE31-B246-4AE5-A659-745C6B9A0554}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F653DE31-B246-4AE5-A659-745C6B9A0554}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F653DE31-B246-4AE5-A659-745C6B9A0554}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F653DE31-B246-4AE5-A659-745C6B9A0554}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C054420-60D8-4790-8D84-96A7A450E7EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C054420-60D8-4790-8D84-96A7A450E7EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C054420-60D8-4790-8D84-96A7A450E7EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C054420-60D8-4790-8D84-96A7A450E7EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FA2E1FE-6E87-414E-A681-0B9075289E0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FA2E1FE-6E87-414E-A681-0B9075289E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FA2E1FE-6E87-414E-A681-0B9075289E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FA2E1FE-6E87-414E-A681-0B9075289E0F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2107D6E4-98AC-4B26-9E56-4BA1E24FC6C2}
+	EndGlobalSection
+EndGlobal
