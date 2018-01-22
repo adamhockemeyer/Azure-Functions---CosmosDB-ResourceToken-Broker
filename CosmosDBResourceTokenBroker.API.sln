@@ -9,6 +9,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CosmosDBResourceTokenBroker
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmosDBResourceTokenBrokerV2.API", "CosmosDBResourceTokenBrokerV2.API\CosmosDBResourceTokenBrokerV2.API.csproj", "{7FA2E1FE-6E87-414E-A681-0B9075289E0F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CD99970B-8219-485D-9F1E-45FBF7094FA3}"
+	ProjectSection(SolutionItems) = preProject
+		images\1-Authentication-Login.PNG = images\1-Authentication-Login.PNG
+		images\1-Authentication-Success-EasyAuth-Token.PNG = images\1-Authentication-Success-EasyAuth-Token.PNG
+		images\1-Authentication-Success-Url.PNG = images\1-Authentication-Success-Url.PNG
+		images\1-CosmosDB-Add-Collection-Details.PNG = images\1-CosmosDB-Add-Collection-Details.PNG
+		images\1-CosmosDB-Add-Collection.PNG = images\1-CosmosDB-Add-Collection.PNG
+		images\1-CosmosDB-ConnectionStrings.PNG = images\1-CosmosDB-ConnectionStrings.PNG
+		images\1-CosmosDB-Create.PNG = images\1-CosmosDB-Create.PNG
+		images\1-New-Function-App-Details.PNG = images\1-New-Function-App-Details.PNG
+		images\1-New-Function-App.PNG = images\1-New-Function-App.PNG
+		images\1-Postman-Auth-Me-UserId.PNG = images\1-Postman-Auth-Me-UserId.PNG
+		images\1-Postman-Auth-Me.PNG = images\1-Postman-Auth-Me.PNG
+		images\Function-App-Publish.PNG = images\Function-App-Publish.PNG
+		images\Functions-App-Settings.PNG = images\Functions-App-Settings.PNG
+		images\Functions-Authentication-Details.PNG = images\Functions-Authentication-Details.PNG
+		images\Functions-Authentication.PNG = images\Functions-Authentication.PNG
+		images\Functions-Azure-Portal.PNG = images\Functions-Azure-Portal.PNG
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

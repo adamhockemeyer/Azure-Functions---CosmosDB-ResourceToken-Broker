@@ -51,12 +51,16 @@ namespace CosmosDBResourceTokenBroker.API
 
             PermissionToken permissionToken = null;
 
-            if (req.Headers.Authorization != null && req.Headers.Authorization.Scheme.Equals("Bearer") && !string.IsNullOrEmpty(req.Headers.Authorization.Parameter))
+            var zumoHeader = req.Headers?.GetValues("x-zumo-auth").FirstOrDefault();
+
+            //if (req.Headers.Authorization != null && req.Headers.Authorization.Scheme.Equals("Bearer") && !string.IsNullOrEmpty(req.Headers.Authorization.Parameter))
+            if (!string.IsNullOrEmpty(zumoHeader))
             {
                 // User passed an authenication token
                 // Process and create a user in CosmosDB, write the token to the token cache and return the resource token.
 
-                string accessToken = req.Headers.Authorization.Parameter;
+                //string accessToken = req.Headers.Authorization.Parameter;
+                string accessToken = zumoHeader;
                 string userId = await GetUserIDFromAccessToken(HOST, accessToken);
 
                 if (string.IsNullOrEmpty(userId))
