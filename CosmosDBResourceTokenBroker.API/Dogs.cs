@@ -159,6 +159,45 @@ namespace CosmosDBResourceTokenBroker.API
                 : req.CreateResponse(HttpStatusCode.OK, results);
         }
 
+        [FunctionName("GetDogsByBreed")]
+        public static async Task<HttpResponseMessage> GetDogsByBreed(
+[HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)]HttpRequestMessage req,
+TraceWriter log)
+        {
+            sw.Restart();
+
+            var queryValues = req.GetQueryNameValuePairs();
+
+            // As a client, you would already have your userId when calling typically.
+            string userId = queryValues.FirstOrDefault(p => p.Key == "UserId").Value;
+
+            string breed = queryValues.FirstOrDefault(p => p.Key == "Breed").Value;
+
+            string resourceToken = req.Headers?.GetValues("ResourceToken").FirstOrDefault();
+
+            if (string.IsNullOrEmpty(resourceToken))
+            {
+                return req.CreateErrorResponse(HttpStatusCode.Unauthorized, "ResourceToken is a required");
+            }
+
+            // Set the resource token, to demonstrate usage from a 'Client'.
+            repo.AuthKeyOrResourceToken(resourceToken);
+
+            // Set the parition key, since our resource token is limited by partition key.  A client could just set this once initially.
+            repo.PartitionKey(userId);
+
+            var results = await repo.GetItemAsync<Dog>(p => p.Breed == breed);
+
+            sw.Stop();
+
+
+            log.Info($"Execution took: {sw.ElapsedMilliseconds}ms.");
+
+            return results == null
+                ? req.CreateResponse(HttpStatusCode.BadRequest, "Unable to find document(s) with the given type.")
+                : req.CreateResponse(HttpStatusCode.OK, results);
+        }
+
         public static string GetEnvironmentVariable(string name)
         {
             return System.Environment.GetEnvironmentVariable(name, EnvironmentVariableTarget.Process);

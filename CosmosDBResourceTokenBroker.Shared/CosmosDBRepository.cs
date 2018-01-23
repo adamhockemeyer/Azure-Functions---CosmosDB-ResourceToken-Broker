@@ -54,7 +54,7 @@ namespace CosmosDBResourceTokenBroker.Shared
                             MaxRetryWaitTimeInSeconds = 15
                         },
                         ConnectionMode = ConnectionMode.Direct,     // Use Direct if possible for better performance
-                        ConnectionProtocol = Protocol.Tcp           // Use TCP if possible for better performance
+                        ConnectionProtocol = Protocol.Tcp          // Use TCP if possible for better performance
                     }
                     );
 

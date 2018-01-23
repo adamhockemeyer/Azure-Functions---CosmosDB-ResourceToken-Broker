@@ -23,6 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		images\1-New-Function-App.PNG = images\1-New-Function-App.PNG
 		images\1-Postman-Auth-Me-UserId.PNG = images\1-Postman-Auth-Me-UserId.PNG
 		images\1-Postman-Auth-Me.PNG = images\1-Postman-Auth-Me.PNG
+		images\CosmosDB-SQL-Query.PNG = images\CosmosDB-SQL-Query.PNG
 		images\Function-App-Publish.PNG = images\Function-App-Publish.PNG
 		images\Functions-App-Settings.PNG = images\Functions-App-Settings.PNG
 		images\Functions-Authentication-Details.PNG = images\Functions-Authentication-Details.PNG
