@@ -12,6 +12,10 @@ Head right over to the [Wiki](https://github.com/adamhockemeyer/Azure-Functions-
 
 [4 - Cosmos DB Repository Class](https://github.com/adamhockemeyer/Azure-Functions---CosmosDB-ResourceToken-Broker/wiki/4-Cosmos-DB-Repository-Class)
 
+[5- Cosmos DB Users, Permissions, Partition Keys](https://github.com/adamhockemeyer/Azure-Functions---CosmosDB-ResourceToken-Broker/wiki/5-Cosmos-DB-Users,-Permissions,-Partition-Keys)
+
+[6-View Cosmos DB SQL Query](https://github.com/adamhockemeyer/Azure-Functions---CosmosDB-ResourceToken-Broker/wiki/6-View-Cosmos-DB-SQL-Query)
+
 ### Introduction
 
 ***
@@ -51,3 +55,4 @@ We will create an Azure Function to use the master key of our Cosmos DB account 
 
 ### Objective 2
 The second objective was to create a simple repository wrapper on top of the .Net client SDK which would save some duplicated code and provide some additional support for semi-structured data in terms of serialized C# POCO objects and being able to query on the type of documents in the database in a unified way.  We can use the resource token the client received from objective 1, and set this in our Cosmos DB repository to use for requests to Cosmos DB.
+
