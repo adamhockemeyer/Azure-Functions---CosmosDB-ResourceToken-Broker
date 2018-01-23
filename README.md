@@ -2,7 +2,7 @@
 
 Welcome to the repo!
 
-Head right over to the [Wiki](https://github.com/adamhockemeyer/Azure-Functions---CosmosDB-ResourceToken-Broker/wiki) for guide to get started!
+Head right over to the [Wiki](https://github.com/adamhockemeyer/Azure-Functions---CosmosDB-ResourceToken-Broker/wiki) for a guide to get started!
 
 [1 - Create Cosmos DB Account](https://github.com/adamhockemeyer/Azure-Functions---CosmosDB-ResourceToken-Broker/wiki/1-Create-Cosmos-DB-Account)
 
