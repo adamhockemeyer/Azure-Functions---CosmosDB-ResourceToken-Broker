@@ -28,6 +28,9 @@ namespace CosmosDBResourceTokenBroker.API
 
         static System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
 
+        private static readonly Lazy<HttpClient> _http = new Lazy<HttpClient>(() => new HttpClient());
+        private static HttpClient http => _http.Value;
+
         // Using our repository instead of CosmosDB Bindings.
         static CosmosDBRepository repo = CosmosDBRepository.Instance
                 .ConnectionString(GetEnvironmentVariable("myCosmosDB"))
@@ -97,14 +100,11 @@ namespace CosmosDBResourceTokenBroker.API
         {
             string userId = string.Empty;
 
-            using (var http = new HttpClient())
-            {
-                http.DefaultRequestHeaders.Add("x-zumo-auth", accessToken);
-                var response = await http.GetAsync(host + "/.auth/me");
-                string rs = await response.Content.ReadAsStringAsync();
-                var rj = JsonConvert.DeserializeObject<JArray>(rs);
-                userId = rj.Children().FirstOrDefault().Children<JProperty>().FirstOrDefault(x => x.Name == "user_id").Value.ToString();
-            }
+            http.DefaultRequestHeaders.Add("x-zumo-auth", accessToken);
+            var response = await http.GetAsync(host + "/.auth/me");
+            string rs = await response.Content.ReadAsStringAsync();
+            var rj = JsonConvert.DeserializeObject<JArray>(rs);
+            userId = rj.Children().FirstOrDefault().Children<JProperty>().FirstOrDefault(x => x.Name == "user_id").Value.ToString();
 
             return userId;
         }
@@ -147,7 +147,7 @@ namespace CosmosDBResourceTokenBroker.API
                         // Permission restricts access to this partition key
                         ResourcePartitionKey = new PartitionKey(userId),
                         // Unique per user
-                        Id = permissionId   
+                        Id = permissionId
 
                     };
 
